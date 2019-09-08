@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 20_190_907_190_713) do
   end
 
   create_table 'import_files', force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8' do |t|
-    t.string 'name'
-    t.binary 'content'
-    t.boolean 'processed'
+    t.string 'file_name'
+    t.string 'content_type'
+    t.binary 'file_contents'
+    t.boolean 'processed', default: false
     t.string 'processing_errors'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false

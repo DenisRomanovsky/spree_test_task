@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   Spree::Core::Engine.add_routes do
     namespace :admin, path: Spree.admin_path do
-      resources :csv_uploads, only: %i[create index]
+      resources :import_files, only: %i[new create index]
     end
   end
 end
