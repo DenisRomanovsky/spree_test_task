@@ -1,0 +1,10 @@
+<%= render partial: 'spree/admin/import_files/shared/flash' %>
+<%= form_for(:import_file, :url => admin_import_files_url) do |f| %>
+  <%= f.field_container :file do %>
+    <%= f.label :import_files, 'Import File'%><br />
+    <%= f.file_field :file %>
+  <% end %>
+  <br/>
+  <br/>
+  <%= f.submit "Upload" %>
+<% end %>
