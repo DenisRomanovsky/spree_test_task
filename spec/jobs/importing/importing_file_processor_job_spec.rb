@@ -3,10 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe Importing::ImportFileProcessJob do
-  let(:importing_file) { FactoryBot.create(:importing_file) }
+  let(:import_file) { FactoryBot.create(:import_file) }
 
   it 'runs a processor' do
-    expect(Importing::ContentProcessor).to receive(:call).with(importing_file.file_contents)
-    described_class.perform_now(importing_file.id)
+    expect(Importing::ContentProcessor).to receive(:call).with(import_file)
+    described_class.perform_now(import_file.id)
   end
 end
