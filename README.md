@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Task description:
 
-Things you may want to cover:
+Add a feature that will let admins upload products to the Spree database from a .csv file
 
-* Ruby version
+## How to use
 
-* System dependencies
+A form for file uploading is available at /admin/import_files/new
 
-* Configuration
+Index of last 10 uploads is at /admin/import_files
 
-* Database creation
+## What can be improved
 
-* Database initialization
+* Add validation for file extension and size
+* Move file storing from DB to cloud(ex. AWS S3)
 
-* How to run the test suite
+## Tests
 
-* Services (job queues, cache servers, search engines, etc.)
+Run 'rspec'
 
-* Deployment instructions
+## Misc:
 
-* ...
+At its current state the csv example file doesn't have all data to save Products. So tests fail.
+Admin side authorisation is not stubbed. So not tests for admin side.
+
