@@ -1,0 +1,22 @@
+<%= render partial: 'spree/admin/import_files/shared/flash' %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Processed</th>
+      <th>Errors</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @import_files.each do |import_file| %>
+  <tr>
+    <td><%= import_file.id %></td>
+    <td><%= import_file.file_name %></td>
+    <td><%= import_file.processed %></td>
+    <td><%= import_file.processing_errors %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>

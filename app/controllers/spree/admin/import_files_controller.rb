@@ -15,6 +15,10 @@ module Spree
         end
       end
 
+      def index
+        @import_files = Importing::ImportFile.last(10)
+      end
+
       private
 
       def import_file_params
